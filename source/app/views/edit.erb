@@ -1,0 +1,27 @@
+<h3>Edit your workout:</h3>
+
+<form action="/workouts/<%= @workout.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="name">Name:</label>
+  <input type="text" name="workout[name]" value="<%= @workout.name %>" />
+  </br>
+
+  <label for="body_part">Body Part:</label>
+  <input type="text" name="workout[body_part]" value="<%= @workout.body_part %>" />
+  </br>
+
+  <label for="weight">Weight:</label>
+  <input type="text" name="workout[weight]" value="<%= @workout.weight %>" />
+  </br>
+
+  <label for="set">Sets:</label>
+  <input type="text" name="workout[set]" value="<%= @workout.set %>" />
+  </br>
+
+  <label for="rep">Reps:</label>
+  <input type="text" name="workout[rep]" value="<%= @workout.rep %>" />
+  </br>
+
+  <input type="submit" value="Update">
+</form>
+

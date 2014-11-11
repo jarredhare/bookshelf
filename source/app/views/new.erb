@@ -1,0 +1,26 @@
+<h3>Add a new workout</h3>
+
+<form action="/workouts/new" method="post">
+  <input type="hidden" name="_method" >
+  <label for="name">Name:</label>
+  <input type="text" name="workout[name]" />
+  </br>
+
+  <label for="body_part">Body Part:</label>
+  <input type="text" name="workout[body_part]"  />
+  </br>
+
+  <label for="weight">Weight:</label>
+  <input type="text" name="workout[weight]" />
+  </br>
+
+  <label for="set">Sets:</label>
+  <input type="text" name="workout[set]" />
+  </br>
+
+  <label for="rep">Reps:</label>
+  <input type="text" name="workout[rep]" />
+  </br>
+
+  <input type="submit" value="Add">
+</form>

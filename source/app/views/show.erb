@@ -1,0 +1,14 @@
+<dl>
+  <dt>Name:</dt>
+  <dd><%= @workout.name %></dd>
+  <dt>Body part:</dt>
+  <dd><%= @workout.body_part %></dd>
+  <dt>Weight:</dt>
+  <dd><%= @workout.weight %></dd>
+  <dt>Sets:</dt>
+  <dd><%= @workout.set %></dd>
+  <dt>Reps:</dt>
+  <dd><%= @workout.rep %></dd>
+</dl>
+
+<a href="/workouts/<%= @workout.id %>/edit">Edit this workout</a>
