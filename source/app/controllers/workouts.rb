@@ -1,4 +1,6 @@
 get '/' do
+  redirect '/login' unless session[:user_id]
+
   @workouts = Workout.all
 
   session[:workout_views] = 0 unless session[:workout_views]

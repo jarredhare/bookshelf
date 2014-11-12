@@ -3,23 +3,23 @@
 <form action="/workouts/new" method="post">
   <input type="hidden" name="_method" >
   <label for="name">Name:</label>
-  <input type="text" name="workout[name]" />
+  <input type="text" name="workout[name]" required/>
   </br>
 
   <label for="body_part">Body Part:</label>
-  <input type="text" name="workout[body_part]"  />
+  <input type="text" name="workout[body_part]" required/>
   </br>
 
   <label for="weight">Weight:</label>
-  <input type="text" name="workout[weight]" />
+  <input type="text" name="workout[weight]" required/>
   </br>
 
   <label for="set">Sets:</label>
-  <input type="text" name="workout[set]" />
+  <input type="text" name="workout[set]" required/>
   </br>
 
   <label for="rep">Reps:</label>
-  <input type="text" name="workout[rep]" />
+  <input type="text" name="workout[rep]" required/>
   </br>
 
   <input type="submit" value="Add">
