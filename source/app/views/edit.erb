@@ -10,7 +10,7 @@
   <input type="text" name="workout[body_part]" value="<%= @workout.body_part %>" />
   </br>
 
-  <label for="weight">Weight:</label>
+  <label for="weight">Weight in pounds:</label>
   <input type="text" name="workout[weight]" value="<%= @workout.weight %>" />
   </br>
 
@@ -20,6 +20,10 @@
 
   <label for="rep">Reps:</label>
   <input type="text" name="workout[rep]" value="<%= @workout.rep %>" />
+  </br>
+
+  <label for="date">Date:</label>
+  <input type="text" name="workout[date]" value="<%= @workout.date %>" />
   </br>
 
   <input type="submit" value="Update">
