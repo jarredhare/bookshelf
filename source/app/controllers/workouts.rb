@@ -5,11 +5,12 @@ get '/' do
 
   session[:workout_views] = 0 unless session[:workout_views]
   session[:workout_views] += 1
-
+  @user = User.find(session[:user_id])
   erb :index
 end
 
 get '/workouts/new' do
+  p @errors
   erb :new
 end
 
@@ -27,7 +28,7 @@ end
 delete '/workouts/:id' do
   @workout = Workout.find(params[:id])
   @workout.destroy
-  redirect to '/workouts'
+  redirect to '/'
 end
 
 get '/workouts/:id/edit' do
@@ -40,3 +41,4 @@ put '/workouts/:id' do
   @workout.update(params[:workout])
   redirect to "/workouts/#{@workout.id}"
 end
+

@@ -1,36 +1,42 @@
 <div id="container">
+<ul>
+<% if @errors %>
+  <% @errors.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+<% end %>
+</ul>
   <header>
     <a href="/logout">Logout</a>
-  </header>
-  <div id="main">
     <h3>Add a new workout</h3>
+  </header>
+  <div>
     <form action="/workouts/new" method="post">
-      <input type="hidden" name="_method" >
       <label for="name">Name:</label>
-      <input type="text" name="workout[name]" required/>
+      <input type="text" name="workout[name]" required />
       </br>
 
       <label for="body_part">Body Part:</label>
-      <input type="text" name="workout[body_part]" required/>
+      <input type="text" name="workout[body_part]" required />
       </br>
 
       <label for="weight">Weight in pounds:</label>
-      <input type="text" name="workout[weight]" required/>
+      <input type="text" name="workout[weight]" required />
       </br>
 
       <label for="set">Sets:</label>
-      <input type="text" name="workout[set]" required/>
+      <input type="text" name="workout[set]" required />
       </br>
 
       <label for="rep">Reps:</label>
-      <input type="text" name="workout[rep]" required/>
+      <input type="text" name="workout[rep]" required />
       </br>
 
       <label for="date">Date:</label>
-      <input id="date" type="text" name="workout[date]" required />
-      </br>
+      <input id="datecal" type="date" name="workout[date]" required />
+      </br></br>
 
-      <input type="submit" value="Add">
+      <input type="submit" value="Add"/>
     </form>
   </div>
   <footer>

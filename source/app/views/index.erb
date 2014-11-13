@@ -1,13 +1,14 @@
 <div id="container">
   <header>
-    <a href="/logout">Logout</a>
+    <a href="/logout">Get out and workout!</a>
   </header>
   <div id="main">
     <div id="column1">
-      <h1>Checkout your Routines!</h1>
+      <h1>Welcome, <%= @user.username %></h1>
+      <h1>Checkout your workouts!</h1>
       <ul>
         <% @workouts.each do |workout| %>
-          <li><a href="/workouts/<%= workout.id %>"><%= workout.name %></a>
+          <li><a href="/workouts/<%= workout.id %>"><%= workout.name %> : <%= workout.date %><br> Weight: <%= workout.weight %><br>  Sets: <%= workout.set %><br>  Reps: <%= workout.rep %></a></li>
           <form action="/workouts/<%= workout.id %>" method="post">
             <input type="hidden" name="_method" value="delete">
             <input type="submit" value="Remove">
@@ -17,7 +18,36 @@
       </ul>
     </div>
     <div id="sidebar">
-      <a href="/workouts/new">Add a new workout!</a>
+      <div id="addform">
+        <button id="addworkout" type="button">Add a new workout!</button>
+        <form action="/workouts/new" method="post">
+          <label for="name">Name:</label>
+          <input type="text" name="workout[name]" required />
+          </br>
+
+          <label for="body_part">Body Part:</label>
+          <input type="text" name="workout[body_part]" required />
+          </br>
+
+          <label for="weight">Weight in pounds:</label>
+          <input type="text" name="workout[weight]" required />
+          </br>
+
+          <label for="set">Sets:</label>
+          <input type="text" name="workout[set]" required />
+          </br>
+
+          <label for="rep">Reps:</label>
+          <input type="text" name="workout[rep]" required />
+          </br>
+
+          <label for="date">Date:</label>
+          <input id="datecal" type="date" name="workout[date]" required />
+          </br></br>
+
+          <input type="submit" value="Add"/>
+        </form>
+      </div>
     </div>
   </div>
   <footer>

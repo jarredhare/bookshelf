@@ -8,6 +8,7 @@ post '/login' do
     session[:user_id] = user.id
     redirect '/'
   else
+    @errors = "The username and password were not correct."
     erb :login
   end
 end

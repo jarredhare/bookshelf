@@ -6,7 +6,7 @@ class CreateWorkouts < ActiveRecord::Migration
       t.integer :weight
       t.integer :set
       t.integer :rep
-      t.integer :date
+      t.date :date
       t.timestamps
     end
   end

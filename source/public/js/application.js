@@ -1,7 +1,35 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-  $('#date').datepicker({ });
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+var feedbackTemplate= $.trim($('#feedback_template').html());
+
+$('.add').on('click', addFeedback);
+$('.feedback_list').on('click', '.delete',removeFeedback);
+
+function removeFeedback(){
+  $(this).closest('div').remove();
+};
+
+function addFeedback(){
+  $feedback = buildFeedback();
+  $('.feedback_list').append($feedback);
+  clearInput();
+}
+
+function clearInput(){
+  $('#content').val('');
+};
+
+function buildFeedback(){
+
+$feedbackTemplate = $(feedbackTemplate);
+
+date = $('#date').val();
+content = $('#content').val();
+
+$feedbackTemplate.find('.date span').text(date);
+$feedbackTemplate.find('.content').text(content);
+
+return $feedbackTemplate;
+
+}
+
 });
