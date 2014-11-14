@@ -15,6 +15,7 @@
     </div>
     <div id="feedback_template" style="display : none;">
       <div class="feedback">
+        <h3>Name: <%= @user.username %></h3>
         <h3 class="date">Date: <span></span></h3>
         <!-- <h3 class="from">From: <span></span></h3> -->
         <div class="content"></div>
@@ -25,13 +26,13 @@
     </div>
   </div>
   <div id="sidebar">
-<!--     <ul> -->
+    <ul>
       <li>Name: <%= @workout.name %></li>
       <li>Body part: <%= @workout.body_part %></li>
       <li>Weight: <%= @workout.weight %></li>
       <li>Sets: <%= @workout.set %></li>
       <li>Reps: <%= @workout.rep %></li>
-    <!-- </ul> -->
+    </ul>
     <a href="/workouts/<%= @workout.id %>/edit">Edit</a>
   </div>
   <footer>

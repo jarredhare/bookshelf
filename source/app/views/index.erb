@@ -1,15 +1,15 @@
 <div id="container">
   <header>
     <h1 class="title">GOWO</h1>
-    <a href="/logout">Get out and workout!</a>
+    <a href="/logout">logout</a>
   </header>
   <div id="main">
     <div id="column1">
       <h1>Welcome, <%= @user.username %>!</h1>
-      <h1>Checkout your workouts!</h1>
+      <h1>Checkout the community's recent workouts!</h1>
       <ul>
         <% @workouts.each do |workout| %>
-          <li><a href="/workouts/<%= workout.id %>"><%= workout.name %> : <%= workout.date %><br> Weight: <%= workout.weight %><br>  Sets: <%= workout.set %><br>  Reps: <%= workout.rep %></a></li>
+          <li><a href="/workouts/<%= workout.id %>"><%= workout.date %><br><%= workout.name %><br> Weight: <%= workout.weight %><br>  Sets: <%= workout.set %><br>  Reps: <%= workout.rep %></a></li>
           <form action="/workouts/<%= workout.id %>" method="post">
             <input type="hidden" name="_method" value="delete">
             <input type="submit" value="Remove">

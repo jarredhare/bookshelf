@@ -16,7 +16,9 @@ gem 'rake'
 gem 'shotgun'
 gem 'bcrypt'
 gem 'httparty'
-gem 'mmf'
+gem 'google_calendar'
+gem 'oauth'
+gem 'signet'
 
 group :test do
   gem 'shoulda-matchers'

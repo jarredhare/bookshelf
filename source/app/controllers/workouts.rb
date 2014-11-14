@@ -1,7 +1,3 @@
-require 'json'
-require 'httparty'
-
-
 get '/' do
   redirect '/login' unless session[:user_id]
 
@@ -17,6 +13,7 @@ get '/workouts/new' do
 end
 
 get '/workouts/:id' do
+  @user = User.find(session[:user_id])
   @workout = Workout.find(params[:id])
   erb :show
 end
