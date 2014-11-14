@@ -30,6 +30,5 @@ function buildFeedback(){
   return $feedbackTemplate;
   }
 
-$('#ologin').hide();
   // });
 });

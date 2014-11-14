@@ -1,49 +1,40 @@
 <div id="container">
-  <header>
-    <a href="/logout">Get out and workout!</a>
-  </header>
-
-  <div id="sidebar">
-    <dl>
-      <dt>Name:</dt>
-      <dd><%= @workout.name %></dd>
-      <dt>Body part:</dt>
-      <dd><%= @workout.body_part %></dd>
-      <dt>Weight:</dt>
-      <dd><%= @workout.weight %></dd>
-      <dt>Sets:</dt>
-      <dd><%= @workout.set %></dd>
-      <dt>Reps:</dt>
-      <dd><%= @workout.rep %></dd>
-    </dl>
-
-<a href="/workouts/<%= @workout.id %>/edit">Edit</a>
+<header>
+  <h1 class="title">GOWO</h1>
+  <a href="/logout">Get out and workout!</a>
+</header>
+  <div id="column1">
+    <h2>What is your feedback about this workout?</h2>
+    <div id="feedback">
+      <div class="toolbox">
+        Date: <input type="date" class="feedback" id="date" />
+        Feedback: <textarea class="feedback" id="content"></textarea>
+        <button class="add">Leave Feedback</button>
+      </div>
+      <div class="feedback_list"></div>
+    </div>
+    <div id="feedback_template" style="display : none;">
+      <div class="feedback">
+        <h3 class="date">Date: <span></span></h3>
+        <!-- <h3 class="from">From: <span></span></h3> -->
+        <div class="content"></div>
+        <ul>
+          <li><a href="#" class="delete">Delete</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-
-  <h2>What is your feedback about this workout?</h2>
-
-  <div id="feedback">
-    <div class="toolbox">
-      Date: <input type="date" class="feedback" id="date" />
-      Feedback: <textarea class="feedback" id="content"></textarea>
-      <button class="add">Leave Feedback</button>
-    </div>
-
-    <div class="feedback_list">
-
-    </div>
-
-  <div id="feedback_template" style="display : none;">
-    <div class="feedback">
-      <h3 class="date">Date: <span></span></h3>
-      <!-- <h3 class="from">From: <span></span></h3> -->
-      <div class="content"></div>
-      <ul>
-        <li><a href="#" class="delete">Delete</a></li>
-      </ul>
-    </div>
+  <div id="sidebar">
+<!--     <ul> -->
+      <li>Name: <%= @workout.name %></li>
+      <li>Body part: <%= @workout.body_part %></li>
+      <li>Weight: <%= @workout.weight %></li>
+      <li>Sets: <%= @workout.set %></li>
+      <li>Reps: <%= @workout.rep %></li>
+    <!-- </ul> -->
+    <a href="/workouts/<%= @workout.id %>/edit">Edit</a>
   </div>
   <footer>
-  this is the footer
+  Lyman Wong | <a href="http://localhost:9393">Home</a> | <a href="http://lymanwong.github.io/blog-posts/week9_cultural.html">Blog</a>
   </footer>
 </div>
