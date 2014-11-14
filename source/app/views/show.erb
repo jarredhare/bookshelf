@@ -20,30 +20,29 @@
 <a href="/workouts/<%= @workout.id %>/edit">Edit</a>
   </div>
 
-<h2>What is your feedback about this workout?</h2>
+  <h2>What is your feedback about this workout?</h2>
 
-<div id="feedback">
-  <div class="toolbox">
-    Date: <input type="date" class="feedback" id="date" />
-    Feedback: <textarea class="feedback" id="content"></textarea>
-    <button class="add">Leave Feedback</button>
+  <div id="feedback">
+    <div class="toolbox">
+      Date: <input type="date" class="feedback" id="date" />
+      Feedback: <textarea class="feedback" id="content"></textarea>
+      <button class="add">Leave Feedback</button>
+    </div>
+
+    <div class="feedback_list">
+
+    </div>
+
+  <div id="feedback_template" style="display : none;">
+    <div class="feedback">
+      <h3 class="date">Date: <span></span></h3>
+      <!-- <h3 class="from">From: <span></span></h3> -->
+      <div class="content"></div>
+      <ul>
+        <li><a href="#" class="delete">Delete</a></li>
+      </ul>
+    </div>
   </div>
-
-  <div class="feedback_list">
-
-  </div>
-
-
-<div id="feedback_template" style="display : none;">
-  <div class="feedback">
-    <h3 class="date">Date: <span></span></h3>
-    <!-- <h3 class="from">From: <span></span></h3> -->
-    <div class="content"></div>
-    <ul>
-      <li><a href="#" class="delete">Delete</a></li>
-    </ul>
-  </div>
-</div>
   <footer>
   this is the footer
   </footer>

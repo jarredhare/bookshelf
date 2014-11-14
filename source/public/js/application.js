@@ -19,17 +19,17 @@ function clearInput(){
 };
 
 function buildFeedback(){
+  $feedbackTemplate = $(feedbackTemplate);
 
-$feedbackTemplate = $(feedbackTemplate);
+  date = $('#date').val();
+  content = $('#content').val();
 
-date = $('#date').val();
-content = $('#content').val();
+  $feedbackTemplate.find('.date span').text(date);
+  $feedbackTemplate.find('.content').text(content);
 
-$feedbackTemplate.find('.date span').text(date);
-$feedbackTemplate.find('.content').text(content);
+  return $feedbackTemplate;
+  }
 
-return $feedbackTemplate;
-
-}
-
+$('#ologin').hide();
+  // });
 });
