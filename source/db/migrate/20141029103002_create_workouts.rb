@@ -1,6 +1,7 @@
 class CreateWorkouts < ActiveRecord::Migration
   def change
     create_table :workouts do |t|
+      t.belongs_to :user
       t.string :name
       t.string :body_part
       t.integer :weight
