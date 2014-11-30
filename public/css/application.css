@@ -1,0 +1,38 @@
+body, html {
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -50px;
+  padding: 0 0 50px;
+}
+
+body{
+  background-image: url("../img/Bookshelf.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#head_nav {
+  background-color: #222222;
+  border-color: #080808;
+}
+
+#signin label {
+  color: white;
+}
+
+#signin {
+  margin-top: 75px;
+}
+
+footer a {
+  color: grey;
+}
+
+#footer-body {
+  margin-left:33%;
+}

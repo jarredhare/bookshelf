@@ -1,0 +1,15 @@
+Planning:
+
+views:
+Homepage: login/signup might be on here
+My library - list all books in your shelf (remove button for each book)
+Book page - button to add the book to your library (remove if its already in library)
+
+
+
+models:
+User
+Book
+Ratings
+
+
