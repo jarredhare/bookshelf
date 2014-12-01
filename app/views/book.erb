@@ -1,0 +1,18 @@
+<div class="container book">
+  <div class="col-md-2">
+    <img class="img-rounded" src="<%= @book.image_link %>">
+  </div>
+  <div class="cold-md-4">
+    <h1><%= @book.title %></h1>
+    <h2><%= @book.authors %></h2>
+  </div>
+  <div class="col-md-10">
+    <p><%= @book.description %></p>
+  </div>
+  <div class="col-md-3">
+    <h4><%= @book.categories %></h4>
+    <h4>ISBN: <%= @book.isbn %></h4>
+    <h4>Avg. Rating<%= @book.average_rating %></h4>
+  </div>
+
+</div>

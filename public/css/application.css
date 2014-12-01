@@ -36,3 +36,12 @@ footer a {
 #footer-body {
   margin-left:33%;
 }
+
+.book {
+  background-color: rgba(34, 34, 34, 0.55);
+  color: white;
+}
+
+.book img {
+  padding: 10px;
+}
