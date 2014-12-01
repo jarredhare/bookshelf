@@ -15,6 +15,10 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'googlebooks'
+
+gem 'bcrypt'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
