@@ -5,7 +5,7 @@
 </header>
   <div id="column1">
     <h2>What is your feedback about this workout?</h2>
-    <div id="feedback">
+  <div id="feedback">
       <div class="toolbox">
         Date: <input type="date" class="feedback" id="date" />
         Feedback: <textarea class="feedback" id="content"></textarea>
@@ -17,7 +17,6 @@
       <div class="feedback">
         <h3>Name: <%= @user.username %></h3>
         <h3 class="date">Date: <span></span></h3>
-        <!-- <h3 class="from">From: <span></span></h3> -->
         <div class="content"></div>
         <ul>
           <li><a href="#" class="delete">Delete</a></li>
@@ -36,6 +35,6 @@
     <a href="/workouts/<%= @workout.id %>/edit">Edit</a>
   </div>
   <footer>
-  Lyman Wong | <a href="http://localhost:9393">Home</a> | <a href="http://lymanwong.github.io/blog-posts/week9_cultural.html">Blog</a>
+  <a href="http://localhost:9393">Home</a> | <a href="http://lymanwong.github.io/blog-posts/week9_cultural.html">Blog</a>
   </footer>
 </div>

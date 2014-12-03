@@ -20,7 +20,8 @@ end
 
 post '/workouts/new' do
   Workout.create(params[:workout])
-  redirect to '/'
+  p "hello checking route"
+  redirect to '/' , :layout => false
 end
 
 delete '/workouts/:id' do
