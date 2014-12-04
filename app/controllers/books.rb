@@ -13,10 +13,8 @@ get "/books/:id" do
 end
 
 post "/books" do
-  if current_user
-    book = current_user.books.create(params)
-  end
-  redirect "/"
+  book = current_user.books.create(params) if current_user
+  book.to_json
 end
 
 delete "/books/:id" do

@@ -10,7 +10,7 @@ require 'dotenv'
 Dotenv.load
 
 require 'rubygems'
-
+require 'json'
 require 'uri'
 require 'pathname'
 
