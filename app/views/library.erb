@@ -1,1 +1,12 @@
-<h1>Yay Library!</h1>
+<div id="library" class="container">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1"><h2><%= current_user.first_name %>'s Shelf</h2></div>
+  </div>
+  <% @books.each do |book|%>
+  <div id="<%= book.id %>" class="col-sm-3 text-center">
+    <a href="/books/<%= book.id %>"><img src="<%= book.img_url %>"/></a>
+    <h4><%= book.title %></h4>
+    <h5><%= book.author %></h5>
+  </div>
+  <% end %>
+</div>

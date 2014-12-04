@@ -2,6 +2,9 @@ body, html {
   height: 100%;
 }
 
+.col-sm-3 {
+  height: 300px;
+}
 #wrapper {
   min-height: 100%;
   height: auto;
@@ -41,8 +44,24 @@ footer a {
 .book {
   background-color: rgba(34, 34, 34, 0.55);
   color: white;
+  margin-bottom: 20px;
 }
 
 .book img {
   padding: 20px 10px;
+}
+
+#library {
+  background-color: rgba(34, 34, 34, 0.55);
+  color: white;
+  padding: 10px;
+}
+
+#google-btn {
+  width: 200px;
+  margin-top: 5px;
+}
+
+.add-book, .remove-book {
+  margin-bottom: 10px;
 }

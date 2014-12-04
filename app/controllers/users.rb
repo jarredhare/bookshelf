@@ -4,6 +4,7 @@ end
 
 get "/users/:id" do
   @user = User.find(params[:id])
+  @books = @user.books
   erb :library
 end
 
