@@ -9,6 +9,9 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 require 'dotenv'
 Dotenv.load
 
+require 'hirb'
+Hirb.enable
+
 require 'rubygems'
 require 'json'
 require 'uri'

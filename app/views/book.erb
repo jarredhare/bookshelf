@@ -2,13 +2,14 @@
   <div class="row">
     <div class="col-md-2">
       <img class="img-rounded" src="<%= @book.img_url %>">
+      <div class="rating text-left">
+        <h4>:Your Rating</h4>
+        <span id="star-1" class="star">☆</span><span id="star-2" class="star">☆</span><span id="star-3" class="star">☆</span><span id="star-4" class="star">☆</span><span id="star-5" class="star">☆</span>
+      </div>
       <h4><%= @book.categories %></h4>
       <h4>ISBN: <%= @book.isbn %></h4>
       <h4>Avg. Rating <%= @book.average_rating %></h4>
-      <div class="rating text-left">
-        <h4>:Your Rating</h4>
-        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-      </div>
+
     </div>
     <div class="col-md-4">
       <h1><%= @book.title %></h1>
@@ -25,5 +26,6 @@
       <% end %>
     </div>
   </div>
+
 
 </div>
