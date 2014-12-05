@@ -4,6 +4,7 @@
     background-color: #eee;
 
   }
+
 #column1 {
   background-color: white;
   width: 80%;
@@ -11,6 +12,18 @@
   min-height: 630px;
   padding-left: 10%;
 }
+
+#column1 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+
+#column1 ul li {
+  display: inline;
+}
+
 
 #column2 {
   background-color: white;

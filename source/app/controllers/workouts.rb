@@ -19,7 +19,8 @@ get '/workouts/:id' do
 end
 
 post '/workouts/new' do
-  Workout.create(params[:workout])
+  user = User.find(session[:user_id])
+  user.workouts.create(params[:workout])
   p "hello checking route"
   redirect to '/' , :layout => false
 end

@@ -3,78 +3,86 @@
     <h1 class="title">GOWO</h1>
     <a href="/logout">Get out and workout!</a>
   </header> -->
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <div class="navbar-brand navbar-brand-centered">GoWo</div>
-  </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="navbar-brand-centered">
-    <ul class="nav navbar-nav">
-<!--     <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li> -->
-      <li><a href="/">Home</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-<!--       <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li> -->
-      <li><a href="/logout">Logout</a></li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-  </nav>
-  <div id="main">
-    <div id="column1">
-      <h1>Welcome, <%= @user.username %>!</h1>
-      <h1>Checkout the community's recent workouts!</h1>
-      <ul>
-        <% @workouts.each do |workout| %>
-          <li><a href="/workouts/<%= workout.id %>"><%= workout.name %><br> Weight: <%= workout.weight %><br>  Sets: <%= workout.set %><br>  Reps: <%= workout.rep %></a>
-          </li>
-          <form action="/workouts/<%= workout.id %>" method="post">
-            <input type="hidden" name="_method" value="delete">
-            <input type="submit" value="Remove">
-          </form>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    <div id="sidebar">
-      <h3>Add a workout!</h3>
-      <div id="addform">
-        <form action="/workouts/new" method="post">
-          <label for="name">Name:</label>
-          <input type="text" name="workout[name]" required />
-          </br>
-
-          <label for="body_part">Body Part:</label>
-          <input type="text" name="workout[body_part]" required />
-          </br>
-
-          <label for="weight">Weight (lbs):</label>
-          <input type="text" name="workout[weight]" required />
-          </br>
-
-          <label for="set">Sets:</label>
-          <input type="text" name="workout[set]" required />
-          </br>
-
-          <label for="rep">Reps:</label>
-          <input type="text" name="workout[rep]" required />
-
-          </br></br>
-
-          <input type="submit" value="Add"/>
-        </form>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand navbar-brand-centered">GoWo</div>
       </div>
-    </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-brand-centered">
+        <ul class="nav navbar-nav">
+<!--     <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li> -->
+  <li><a href="/">Home</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<!--       <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li> -->
+  <li><a href="/logout">Logout</a></li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+<div id="main">
+  <div id="column1">
+    <h1>Welcome, <%= @user.username %>!</h1>
+    <h1>Checkout the community's workouts!</h1>
+      <% @workouts.each do |workout| %>
+      <li><a href="/workouts/<%= workout.id %>"><%= workout.name %><br> Weight: <%= workout.weight %><br>  Sets: <%= workout.set %><br>  Reps: <%= workout.rep %></a></li>
+
+            <form action="/workouts/<%= workout.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Remove">
+      </form>
+      <br>
+  <% end %>
+  <h1>Checkout your workouts!</h1>
+  <% User.find(@user.id).workouts.each do |workout|%>
+    <a href="/workouts/<%= workout.id %>"><%= workout.name %><br> Weight: <%= workout.weight %><br>  Sets: <%= workout.set %><br>  Reps: <%= workout.rep %></a>
+
+    <form action="/workouts/<%= workout.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Remove">
+    </form>
+  <br>
+  <% end %>
   </div>
+<div id="sidebar">
+  <h3>Add a workout!</h3>
+  <div id="addform">
+    <form action="/workouts/new" method="post">
+      <label for="name">Name:</label>
+      <input type="text" name="workout[name]" required />
+    </br>
+
+    <label for="body_part">Body Part:</label>
+    <input type="text" name="workout[body_part]" required />
+  </br>
+
+  <label for="weight">Weight (lbs):</label>
+  <input type="text" name="workout[weight]" required />
+</br>
+
+<label for="set">Sets:</label>
+<input type="text" name="workout[set]" required />
+</br>
+
+<label for="rep">Reps:</label>
+<input type="text" name="workout[rep]" required />
+
+</br></br>
+
+<input type="submit" value="Add"/>
+</form>
+</div>
+</div>
+</div>
 <!-- </div> -->
